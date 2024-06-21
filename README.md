@@ -38,23 +38,23 @@ key_uuid=    # UUID of the encryption key in Fortanix
 encrypted_disk_name=encrypted-disk # You can give any meaningful name
 
 
-##Running the Script
+## Running the Script
 Once everything is configured, run the script as follows:
 Ensure the script has execution permissions: chmod +x your-script.sh
 
 
-##Run the script
+## Run the script
 ./your-script.sh
 
 
-##The script will:
+# The script will:
     Authenticate with Fortanix using the provided API key.
     Retrieve the encryption key from Fortanix.
     Set up LUKS encryption on the specified partition.
     Open the encrypted partition.
 
-##After running the script, you can format and mount the encrypted partition manually:
-# Format the encrypted partition with ext4 filesystem
+# After running the script, you can format and mount the encrypted partition manually:
+Format the encrypted partition with ext4 filesystem
 mkfs.ext4 /dev/mapper/<encrypted_disk_name>
 
 # Create a mount point directory, you can give any name as directory
